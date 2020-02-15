@@ -46,8 +46,8 @@ def cityreader(cities=[]):
 cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
-# for c in cities:
-#     print(c)
+for c in cities:
+    print(c)
 
 # STRETCH GOAL!
 #
@@ -96,11 +96,13 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
     return within
 
 
+# Ask for user given coordinates
 coord1 = input('Enter lat1,lon1: ').strip().split(',')
 lat1 = float(coord1[0])
 lon1 = float(coord1[1])
 coord2 = input('Enter lat2,lon2: ').strip().split(',')
 lat2 = float(coord2[0])
 lon2 = float(coord2[1])
-print(cityreader_stretch(lat1, lon1, lat2, lon2, cities))
 
+# Print out the list of cities within the grid
+print(cityreader_stretch(lat1, lon1, lat2, lon2, cities))
